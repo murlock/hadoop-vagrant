@@ -1,0 +1,27 @@
+"FIX <Home><End> when using Vim in console only
+if $TERM == 'linux'
+set term=xterm
+endif 
+" common stuff
+set nu
+set ai
+syn on
+set bg=light
+set tabstop=4
+set shiftwidth=4
+set backspace=indent,eol,start
+set expandtab
+set smarttab
+set nu
+set bg=dark
+set ruler
+set title
+set nowrap
+set textwidth=5000
+set hlsearch
+set fileencodings=utf-8
+set encoding=utf-8
+set modeline
+
+" force Tab use when editing Makefile
+au FileType make setl tabstop=4 shiftwidth=4 noexpandtab

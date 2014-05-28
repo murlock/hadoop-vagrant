@@ -1,0 +1,4 @@
+term xterm
+hardstatus alwayslastline "%c %w"
+defutf8 on
+defscrollback 10000
