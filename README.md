@@ -1,9 +1,10 @@
 hadoop-vagrant
 ==============
 
-Deploy easily an Hadoop Cluster with HBase
+Deploy easily an Hadoop Cluster with HBase, HBase REST / Zookeeper
 
-- requires Vagrant ( tested with 1.6 )
+- Requires Vagrant ( tested with 1.6 )
+- Put a JDK tarball in same directory ( for example, jdk-7u25-linux-x64.tar.gz ), it will be installed in /opt and a symlink will be added as /opt/jdk
 
 ```
 $ vagrant up
@@ -18,4 +19,5 @@ Check http://www.cloudera.com/content/cloudera-content/cloudera-docs/CDH5/latest
 
 TODO
 ====
- - Deploy more zookeeper server / namenode backup
+ - Deploy more zookeeper server / namenode backup / hbase server backup
+ - Configure an APT proxy to avoid downloading same stuff several times
