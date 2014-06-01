@@ -49,3 +49,5 @@ sudo -u hdfs hadoop fs -chown hbase /hbase
 for srv in $PKG; do
     service $srv start
 done
+
+apt-get clean

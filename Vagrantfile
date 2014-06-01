@@ -2,15 +2,22 @@
 # vi: set ft=ruby :
 
 
+VAGRANTFILE_API_VERSION = "2"
+
 """
     Configure a small cluster for Hadoop :
     one namenode
     two slaves
 """
 
-Vagrant.configure("2") do |config|
-    config.vm.provision :shell, :inline => "ifconfig"
-    config.vm.provision :shell, :inline => "hostname"
+jdk = Dir.glob('jdk*.tar.bz2') + Dir.glob('jdk*.tar.gz')
+if jdk.length != 1
+    print "JDK not found\n"
+    exit 1
+end
+
+Vagrant.configure( VAGRANTFILE_API_VERSION ) do |config|
+    # configure common stuff on all VMs
     config.vm.provision :shell, :path => "common.sh"
 
     # default box used

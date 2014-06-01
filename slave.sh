@@ -22,3 +22,5 @@ done
 for srv in $PKG; do
 	service $srv start
 done
+
+apt-get clean

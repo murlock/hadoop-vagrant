@@ -21,3 +21,9 @@ TODO
 ====
  - Deploy more zookeeper server / namenode backup / hbase server backup
  - Configure an APT proxy to avoid downloading same stuff several times
+
+reminders
+=========
+ - Namenode UI : http://10.0.13.100:50070
+ - HBase Master UI : http://10.0.13.100:60010
+ - HBase Region UI : http://10.0.13.10x:60030
